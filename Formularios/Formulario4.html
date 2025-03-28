@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario de Personal</title>
+  <style>
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-family: sans-serif;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    input[type="text"], input[type="number"], input[type="tel"] select, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      background-color: transparent;
+      padding: 5px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .top-header {
+      background-color: #c2eabd;
+      text-align: center;
+      padding: 10px;
+    }
+    .second-header {
+      background-color: #e6f7ec;
+      text-align: center;
+      padding: 5px;
+    }
+    .aligned-labels label {
+        display: inline-block;
+        width: 150px; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-header">
+    <h1>Machote de Inventario de Personal</h1>
+  </div>
+  <div class="second-header">
+    <h2>Inventario de Personal</h2>
+  </div>
+
+  <form action="/procesar_inventario" method="post">
+    <table>
+      <tr>
+        <th class="aligned-labels">NOMBRE</th>
+        <td><input type="text" name="nombre"></td>
+        <th class="aligned-labels">DIRECCION</th>
+        <td><input type="text" name="direccion"></td>
+      </tr>
+      <tr>
+        <th class="aligned-labels">TELEFONO</th>
+        <td><input type="tel" name="telefono"></td>
+        <th class="aligned-labels">ESTADO CIVIL</th>
+        <td>
+          <select name="estado_civil">
+            <option value="">Seleccionar</option>
+            <option value="soltero">Soltero/a</option>
+            <option value="casado">Casado/a</option>
+            <option value="divorciado">Divorciado/a</option>
+            <option value="viudo">Viudo/a</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">COMPAÑÍA DE SEGUROS <input type="text" name="compania_seguros"></th>
+      </tr>
+      <tr>
+        <th colspan="4">ESTADO GENERAL DE SALUD <span style="font-size: small;">Marca con una X la opción</span></th>
+      </tr>
+      <tr>
+        <td class="checkbox-group" colspan="3">
+          <label><input type="checkbox" name="salud[]" value="hepatitis"> HEPATITIS</label>
+          <label><input type="checkbox" name="salud[]" value="anemias"> ANEMIAS</label>
+          <label><input type="checkbox" name="salud[]" value="hipe_arterial"> HIPE ARTERIAL</label>
+          <label><input type="checkbox" name="salud[]" value="celiaco"> CELIACO</label>
+          <label><input type="checkbox" name="salud[]" value="gastritis"> GASTRITIS</label>
+          <label><input type="checkbox" name="salud[]" value="diabetes"> DIABETES</label>
+          <label><input type="checkbox" name="salud[]" value="hipo_arterial"> HIPO. ARTERIAL</label>
+          <label><input type="checkbox" name="salud[]" value="epilepsia"> EPILEPSIA</label>
+          <label><input type="checkbox" name="salud[]" value="asma"> ASMA</label>
+          <label><input type="checkbox" name="salud[]" value="alergias"> ALERGIAS</label>
+          <label>OTRO: <input type="text" name="salud_otro"></label>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="4">EXPERIENCIA LABORAL</th>
+      </tr>
+      <tr>
+        <th class="aligned-labels">EMPRESA</th>
+        <td><input type="text" name="empresa"></td>
+        <th class="aligned-labels">NOMBRE DEL PUESTO</th>
+        <td><input type="text" name="nombre_puesto"></td>
+      </tr>
+      <tr>
+        <th>FUNCIONES DEL PUESTO</th>
+        <td colspan="3"><textarea name="funciones_puesto"></textarea></td>
+      </tr>
+      <tr>
+        <th colspan="4">FORMACIÓN ACADÉMICA</th>
+      </tr>
+      <tr>
+        <th class="aligned-labels">ESCOLARIDAD</th>
+        <td><input type="text" name="escolaridad"></td>
+        <th class="aligned-labels">PROFESION</th>
+        <td><input type="text" name="profesion"></td>
+      </tr>
+      <tr>
+        <th class="aligned-labels">ESCUELA</th>
+        <td><input type="text" name="escuela"></td>
+        <th colspan="2">ESTUDIOS ADICIONALES</th>
+      </tr>
+      <tr>
+        <th>ENTIDAD O ESCUELA</th>
+        <td colspan="3"><input type="text" name="entidad_escuela"></td>
+      </tr>
+      <tr>
+        <th>TITULO</th>
+        <td colspan="3"><input type="text" name="titulo"></td>
+      </tr>
+      <tr>
+        <th colspan="4">INFORMACIÓN ADICIONAL</th>
+      </tr>
+      <tr>
+        <th class="aligned-labels">No. EMPLEADO</th>
+        <td><input type="number" name="num_empleado"></td>
+        <th class="aligned-labels">PUESTO</th>
+        <td><input type="text" name="puesto_empleado"></td>
+      </tr>
+      <tr>
+        <th class="aligned-labels">No. AÑOS EN EL PUESTO</th>
+        <td><input type="number" name="anos_en_puesto"></td>
+        <th colspan="2">PUESTOS ANTERIORES</th>
+      </tr>
+      <tr>
+        <th>COMENTARIOS</th>
+        <td colspan="3"><textarea name="comentarios"></textarea></td>
+      </tr>
+    </table>
+  </form>
+
+  <a href="index.html">Formulario 1</a>
+  <a href="Formulario2.html">Formulario 2</a>
+  <a href="Formulario3-1.html"> Formulario 3</a>
+</body>
+</html>
