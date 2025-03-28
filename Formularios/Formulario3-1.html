@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de factura</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+          <th colspan="2" rowspan="5" style="background-color: rgb(218, 178, 178);">SUPERMERCADOS "LA VENDEDORA"</th>
+          <th colspan="4"><input type="date" placeholder="Fecha"></th>
+        </tr>
+        <tr>
+          <td colspan="2">Numero de factura</td>
+          <td colspan="2"> <input type="number" placeholder="Numero de factura"></td>
+          
+        </tr>
+        <tr>
+          <td colspan="2">Cliente</td>
+          <td colspan="2"><input type="text" placeholder="Nombre del cliente"></td>
+          
+        </tr>
+        <tr>
+          <td colspan="2">Documento</td>
+          <td colspan="2"><input type="number" placeholder="Numero de Documento" ></td>
+        </tr>
+        <tr>
+          <td colspan="2">Direccion</td>
+          <td colspan="2"><input type="text" placeholder="Direccion"></td>
+        </tr>
+        <tr>
+          <th>CÓDIGO</th>
+          <th>CANTIDAD</th>
+          <th>CONCEPTO</th>
+          <th >PRECIO</th>
+          <th >IMPORTE</th>
+        </tr>
+        <tr>
+          <td ><input type="text"></td>
+          <td ><input type="number"></td>
+          <td><input type="text"></td>
+          <td><input type="number"></td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+            <td ><input type="text"></td>
+            <td ><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="number"></td>
+            <td><input type="number"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td class="text-right">Importe:</td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td class="text-right">Descuento:</td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td class="text-right">Base Imponible:</td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td class="text-right">I.V.A.:</td>
+          <td><input type="number"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td>TOTAL FACTURA</td>
+          <td><input type="number"></td>
+        </tr>
+      </table>
+    
+</body>
+</html>

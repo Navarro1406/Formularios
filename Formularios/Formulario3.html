@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factura Editable</title>
+  <style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-family: sans-serif;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .text-right {
+      text-align: right;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <table>
+      <tr>
+        <th colspan="2" rowspan="4"><input type="text" name="supermercado" value="SUPERMERCADOS 'LA VENDEDORA'"></th>
+        <td colspan="2" ></td>
+        <th class="text-right"><input type="text" name="fecha"></th>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="text" name="n_fra" value="Nº Fra.: 2456/00"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td><input type="text" name="cliente" value="Cliente: Juan Francisco Redrován"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td><input type="text" name="ruc" value="RUC: 1804562738"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td><input type="text" name="direccion" value="Dirección: Ambato, Av. Cevallos"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>CÓDIGO</th>
+        <th>CANTIDAD</th>
+        <th>CONCEPTO</th>
+        <th class="text-right">PRECIO</th>
+        <th class="text-right">IMPORTE</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="codigo[]" value="A23"></td>
+        <td class="text-right"><input type="number" name="cantidad[]" value="20"></td>
+        <td><input type="text" name="concepto[]" value="LAPICES"></td>
+        <td class="text-right"><input type="number" name="precio[]" value="25"></td>
+        <td class="text-right"><input type="number" name="importe[]" value="500"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="codigo[]" value="A45"></td>
+        <td class="text-right"><input type="number" name="cantidad[]" value="100"></td>
+        <td><input type="text" name="concepto[]" value="BORRADORES"></td>
+        <td class="text-right"><input type="number" name="precio[]" value="10"></td>
+        <td class="text-right"><input type="number" name="importe[]" value="1000"></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td class="text-right">Importe:</td>
+        <td class="text-right"><input type="number" name="importe_total" value="1500"></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td class="text-right">Descuento:</td>
+        <td class="text-right"><input type="number" name="descuento" value="75"></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td class="text-right">Base Imponible:</td>
+        <td class="text-right"><input type="number" name="base_imponible" value="1425"></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td class="text-right">I.V.A.:</td>
+        <td class="text-right"><input type="number" name="iva" value="228"></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td colspan="2" class="text-right"><strong>TOTAL FACTURA <input type="number" name="total_factura" value="1653"></strong></td>
+      </tr>
+    </table>
+    <input type="submit" value="Guardar Factura">
+  </form>
+
+</body>
+</html>
